@@ -109,7 +109,7 @@
         .nav-logo {
             font-family: 'Spicy Rice', cursive;
             font-size: 2.2rem;
-            color: #333;
+            color: var(--rosa-mexicano);
             text-shadow: 2px 2px white;
             text-decoration: none;
         }
@@ -162,16 +162,34 @@
         .card-helado {
             background: white;
             border: 8px solid var(--azul-talavera); /* Borde grueso tipo cerámica */
-            border-radius: 0px;
+            border-radius: 25px;
             transition: var(--transition);
             box-shadow: 15px 15px 0px var(--rosa-mexicano);
             margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .card-helado:hover {
             transform: scale(1.02);
             box-shadow: 15px 15px 0px var(--amarillo-cempasuchil);
         }
+        /* .card-helado .contenido {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-helado .precio {
+    font-weight: 900;
+    color: var(--verde-bandera);
+    font-size: 1.5rem;
+    margin-top: 10px;
+} */
 
         .card-info h3 {
             font-family: 'Spicy Rice', cursive;
@@ -179,6 +197,64 @@
             font-size: 2rem;
             margin-bottom: 10px;
         }
+        .productos{
+            border-radius: 20px;
+            width: 100%;
+            display: block;
+        }
+        /* topping */
+        /* --- SECCIÓN TOPPINGS (SLIDER HORIZONTAL) --- */
+/* --- SECCIÓN TOPPINGS --- */
+.toppings-container {
+    padding: 60px 0;
+    background-color: var(--blanco-bandera);
+}
+
+.slider-wrapper {
+    display: flex;
+    overflow-x: auto; /* Permite el deslizamiento */
+    padding: 20px 50px 40px 50px; /* Espacio extra abajo para la barra */
+    gap: 30px;
+    scroll-behavior: smooth;
+}
+
+/* --- ESTILO DE LA BARRA DESLIZABLE (Personalizada) --- */
+/* Tamaño de la barra */
+.slider-wrapper::-webkit-scrollbar {
+    height: 12px; /* Grosor de la barra horizontal */
+}
+
+/* Fondo de la barra (Riel) */
+.slider-wrapper::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin: 0 50px; /* Para que no pegue a los bordes */
+}
+
+/* La parte que se mueve (El indicador) */
+.slider-wrapper::-webkit-scrollbar-thumb {
+    background: var(--rosa-mexicano); /* Color vibrante */
+    border-radius: 10px;
+    border: 2px solid #e0e0e0; /* Efecto de separación */
+}
+
+/* Color al pasar el mouse por la barra */
+.slider-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--azul-talavera);
+}
+
+/* Estilo de las tarjetas de Toppings */
+.topping-card {
+    min-width: 180px;
+    background: white;
+    border: 4px solid var(--naranja-barro);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition);
+}
 
         /* --- SECCIÓN COMENTARIOS: COLOR ROSA MEXICANO --- */
         .reviews {
@@ -277,34 +353,76 @@
     <header class="hero">
         <div data-aos="fade-down">
             <h1>¡Puro Sabor <br>Original!</h1>
-            <p style="font-weight: 900; background: var(--rosa-mexicano); display: inline-block; padding: 5px 15px;">LOS HELADOS MÁS PADRES DE MÉXICO</p>
+            <p style="font-weight: 900; background: var(--rosa-mexicano); display: inline-block; padding: 5px 15px;">NO SOLO ES HELADO, ES CULTURA</p>
         </div>
     </header>
 
     <section id="sabores" class="section-padding">
         <h2 style="font-family: 'Spicy Rice', cursive; text-align: center; font-size: 4rem; color: var(--rojo-bandera); margin-bottom: 50px;">Nuestras Joyas</h2>
-        
+        <p style="text-align: center; font-size: 1.5rem; color: var(--verde-bandera); margin-bottom: 50px;">
+    🎉 POR INAUGURACIÓN 🎉
+</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
             <div class="card-helado" data-aos="flip-left">
-                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=400" style="width: 100%;" alt="Tuna">
+                <img src="mazapan.jpeg" class="productos" style="width: 100%;" alt="Tuna">
                 <div style="padding: 20px; text-align: center;">
-                    <h3>Nieve de Tuna</h3>
-                    <p>Directo del nopal a tu barquillo.</p>
-                    <p style="font-weight: 900; color: var(--verde-bandera); font-size: 1.5rem; margin-top: 10px;">$40 MXN</p>
+                    <h3>Mazataco</h3>
+                    <p>Mazapan Hermosillo .</p>
+                    <p style="font-weight: 900; color: var(--verde-bandera); font-size: 1.5rem; margin-top: 10px;">GRATIS!!!</p>
                 </div>
             </div>
 
             <div class="card-helado" data-aos="flip-left" data-aos-delay="200">
-                <img src="https://images.pexels.com/photos/33149229/pexels-photo-33149229.jpeg" style="width: 100%;" alt="Mango">
+                <img src="chocolate.jpeg"  class="productos" style="width: 100%; height: 100%;" alt="Mango">
                 <div style="padding: 20px; text-align: center;">
-                    <h3>Mango Chamoy</h3>
+                    <h3>Tacocholate</h3>
                     <p>La combinación que nos identifica.</p>
-                    <p style="font-weight: 900; color: var(--verde-bandera); font-size: 1.5rem; margin-top: 10px;">$45 MXN</p>
+                    <p style="font-weight: 900; color: var(--verde-bandera); font-size: 1.5rem; margin-top: 10px;">GRATIS!!!</p>
                 </div>
             </div>
         </div>
     </section>
+<!-- toppgins -->
 
+<section id="toppings" class="toppings-container">
+    <h2 style="font-family: 'Spicy Rice', cursive; text-align: center; font-size: 3rem; color: var(--naranja-barro); margin-bottom: 30px;">¡Ponle su Coronita!</h2>
+
+    <div class="slider-wrapper">
+        <div class="topping-card">
+            <span style="font-size: 3rem;">🌶️</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);">Tajín</span>
+        </div>
+        <div class="topping-card">
+            <span style="font-size: 3rem;">🍬</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);">Mazapán</span>
+        </div>
+        <div class="topping-card">
+            <span style="font-size: 3rem;">🍯</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);">Chamoy</span>
+        </div>
+        <div class="topping-card">
+            <span style="font-size: 3rem;">🐻</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);">Gomitas</span>
+        </div>
+        <div class="topping-card">
+            <span style="font-size: 3rem;">🥥</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);">Coco</span>
+        </div>
+        <div class="topping-card">
+            <span style="font-size: 3rem;">🍫</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);">Granillo</span>
+        </div>
+        <div class="topping-card">
+            <span style="font-size: 3rem;">🌾</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);">Amaranto</span>
+        </div>
+        <div class="topping-card">
+            <span style="font-size: 3rem;">...</span>
+            <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);"> Prueba el sabor, siente la emoción… cada vez más cerca de México en tu porción.</span>
+        </div>
+    </div>
+</section>
+<!-- reseñas -->
     <section id="resenas" class="reviews">
         <h2 style="font-family: 'Spicy Rice', cursive; font-size: 3rem; text-align: center; margin-bottom: 40px;">¿Qué dice la banda?</h2>
         <div class="review-card" data-aos="fade-right">
@@ -337,7 +455,7 @@
                 <h4 style="margin-bottom: 20px;">Redes Sociales</h4>
                 <a href="#" class="social-link">Facebook</a>
                 <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">TikTok</a>
+                <a href="https://www.tiktok.com/@heladosdeliz1?is_from_webapp=1&sender_device=pc" class="social-link">TikTok</a>
             </div>
         </div>
         <div style="text-align: center; margin-top: 50px; font-size: 0.8rem; border-top: 1px solid #333; padding-top: 20px;">
