@@ -251,6 +251,7 @@
     border-radius: 20px;
     padding: 20px;
     display: flex;
+    
     flex-direction: column;
     align-items: center;
     transition: var(--transition);
@@ -272,7 +273,54 @@
             margin: 20px 0;
             box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
         }
+/* salon de la fama */
+/* --- ESTILOS SALÓN DE LA FAMA --- */
+.fama-slider {
+    padding-bottom: 50px; /* Espacio para el scrollbar */
+}
 
+.fama-card {
+    min-width: 280px;
+    height: 350px;
+    border-radius: 15px;
+    position: relative;
+    background: white;
+    border: 10px solid white; /* Efecto marco de foto antigua */
+    box-shadow: 8px 8px 0px var(--azul-talavera);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.fama-card:hover {
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 8px 8px 0px var(--rosa-mexicano);
+    z-index: 10;
+}
+
+.fama-card img {
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen no se deforme */
+    display: block;
+}
+
+.fama-badge {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background: var(--amarillo-cempasuchil);
+    color: var(--azul-talavera);
+    font-family: 'Spicy Rice', cursive;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid var(--azul-talavera);
+    font-size: 1.2rem;
+}
         /* --- FORMULARIO DE CONTACTO --- */
         .contact-box {
             background: white;
@@ -419,6 +467,54 @@
         <div class="topping-card">
             <span style="font-size: 3rem;">...</span>
             <span style="font-family: 'Spicy Rice'; color: var(--azul-talavera);"> Prueba el sabor, siente la emoción… cada vez más cerca de México en tu porción.</span>
+        </div>
+    </div>
+</section>
+<!-- salon de la fama -->
+ <section id="salon-fama" class="section-padding" style="background-color: var(--crema-fondo);">
+    <h2 style="font-family: 'Spicy Rice', cursive; text-align: center; font-size: 4rem; color: var(--azul-talavera); margin-bottom: 10px;">Salón de la Fama</h2>
+    <p style="text-align: center; font-weight: 700; color: var(--rosa-mexicano); margin-bottom: 40px; text-transform: uppercase;">Los clientes más taconchones</p>
+
+    <div class="slider-wrapper fama-slider">
+        <div class="fama-card">
+            <img src="img1.jpg" alt="Fan 1">
+            <div class="fama-badge">#1</div>
+        </div>
+        <div class="fama-card">
+            <img src="img2.jpg" alt="Fan 2">
+            <div class="fama-badge">#2</div>
+        </div>
+        <div class="fama-card">
+            <img src="img3.jpg" alt="Fan 3">
+            <div class="fama-badge">#3</div>
+        </div>
+        <div class="fama-card">
+            <img src="img4.jpg" alt="Fan 4">
+            <div class="fama-badge">#4</div>
+        </div>
+        <div class="fama-card">
+            <img src="img5.jpg" alt="Fan 5">
+            <div class="fama-badge">#5</div>
+        </div>
+        <div class="fama-card">
+            <img src="img6.jpg" alt="Fan 6">
+            <div class="fama-badge">#6</div>
+        </div>
+        <div class="fama-card">
+            <img src="img7.jpg" alt="Fan 7">
+            <div class="fama-badge">#7</div>
+        </div>
+        <div class="fama-card">
+            <img src="img8.jpg" alt="Fan 8">
+            <div class="fama-badge">#8</div>
+        </div>
+        <div class="fama-card">
+            <img src="img9.jpg" alt="Fan 9">
+            <div class="fama-badge">#9</div>
+        </div>
+        <div class="fama-card">
+            <img src="img10.jpg" alt="Fan 10">
+            <div class="fama-badge">#10</div>
         </div>
     </div>
 </section>
